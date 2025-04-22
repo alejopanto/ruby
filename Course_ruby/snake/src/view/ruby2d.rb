@@ -67,15 +67,16 @@ module View
     end
 
     def handle_key_event(event)
-    case event.key
-    when "up"
-      @app.send_action(:change_direction, Model::Direction::UP)
-    when "down"
-      @app.send_action(:change_direction, Model::Direction::DOWN)
-    when "left"
-      @app.send_action(:change_direction, Model::Direction::LEFT)
-    when "right"
-      @app.send_action(:change_direction, Model::Direction::RIGHT)
+      case event.key
+        when "up"
+          @app.send_action(:change_direction, Model::Direction::UP)
+        when "down"
+          @app.send_action(:change_direction, Model::Direction::DOWN)
+        when "left"
+          @app.send_action(:change_direction, Model::Direction::LEFT)
+        when "right"
+          @app.send_action(:change_direction, Model::Direction::RIGHT)
+      end
     end
   end
   end
